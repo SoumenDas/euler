@@ -1,6 +1,8 @@
-public class SpecialPythagoreanTriplet{
+import java.util.Date;
+public class SpecialPythagoreanTriplet1{
 	// There exists exactly one Pythagorean triplet for which a + b + c = 1000. Find abc
 	public static void main(String[] args) {
+		long lStartTime = new Date().getTime();
 		boolean flag = false;
 		int a = 0;
 		int b = 0;
@@ -16,7 +18,7 @@ public class SpecialPythagoreanTriplet{
 					break;
 				}
 			}
-			
+
 			if (i<998) {
 				i++;
 			} else {
@@ -25,6 +27,9 @@ public class SpecialPythagoreanTriplet{
 
 		}
 		System.out.println("a: " + a + " b: "+ b +" c: "+ ((int)Math.sqrt(Math.pow(a,2)+Math.pow(b,2))));
+		long lEndTime = new Date().getTime();
+		long difference = lEndTime - lStartTime;
+		System.out.println("Elapsed milliseconds: " + difference);
 	}
 
 	static boolean conditionMet(int a, int b){
