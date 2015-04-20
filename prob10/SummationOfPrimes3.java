@@ -8,7 +8,7 @@ public class SummationOfPrimes3{
 		int upperBoundSqrt = (int) Math.sqrt(upperBound);
 		boolean[] isComposite = new boolean[upperBound+1];
 		long sum = 0;
-		for (int i = 2;i <=upperBoundSqrt+1 ;i++ ) {
+		for (int i = 2;i <=upperBoundSqrt ;i++ ) {
 			if (!isComposite[i]) {
 				sum+=i;
 				for (int k = i*i;k<=upperBound ;k+=i ) {
