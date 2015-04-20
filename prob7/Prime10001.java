@@ -1,8 +1,10 @@
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Prime10001{
 	// What is the 10 001st prime number?
 	public static void main(String[] args) {
+		long lStartTime = new Date().getTime();
 		ArrayList<Integer> prime = new ArrayList<Integer>();
 		prime.add(2);
 		int num = 3;
@@ -13,7 +15,10 @@ public class Prime10001{
 			}
 			num+=2;
 		}
-		System.out.println(prime.get(requiredPrime-1));		
+		System.out.println(prime.get(requiredPrime-1));
+		long lEndTime = new Date().getTime();
+		long difference = lEndTime - lStartTime;
+		System.out.println("Elapsed milliseconds: " + difference);		
 	}
 
 	static Boolean isPrime(ArrayList<Integer> list,int i){
